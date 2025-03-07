@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Gatos</title>
+    <link rel="stylesheet" href="style/cuestionario_gato.css">
+</head>
+<body id="fondo">  
+
+    <div class="barrita">
+        <a href="index.html" class="logo-link">
+            <img class="imagenlogo" src="Imagenes_principal/Logopag.jpg" alt="Logo del sitio">
+        </a>   
+        <nav>
+            <a class="opciones opc" href="historia.html">Historia de los Gatos</a>
+            <a class="opciones opc" href="cuestionario_gato.html">Registra tu Gato</a>
+            <a class="opciones opc" href="razas.html">Razas de Gatos</a>
+            <a class="opciones opc" href="curiosidades.html">Curiosidades Gatunas</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Registro de Gatos</h1>
+        
+        <div class="image-placeholder">
+            <img id="preview" src="Imagenes_principal/baner.jpg" alt="Imagen de Gato">
+        </div>
+
+        <form action="registro.php" method="post">
+            
+            <fieldset >
+                <legend>Datos del Gato</legend>
+                <label>Nombre del Gato: <input type="text" name="nombre" required></label>
+                <label>Raza:
+                    <select name="raza" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Siamés">Siamés</option>
+                        <option value="Persa">Persa</option>
+                        <option value="Bengalí">Bengalí</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </label>
+                <label>Género:
+                    <select name="genero" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+                    </select>
+                </label>
+                <label>Peso (kg): <input type="number" name="peso" min="1" max="10" step="0.1"></label>
+                <label>Color: <input type="color" name="color"></label>
+                <label>Vacunado: <input type="checkbox" name="vacunado"></label>
+                <label>Fecha de Nacimiento: <input type="date" name="fecha_nacimiento"></label>
+                <label>Sube una Foto: <input type="file" name="foto"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos del Tutor</legend>
+                <label>Nombre del Tutor: <input type="text" name="tutor_nombre" required></label>
+                <label>Email: <input type="email" name="email" required></label>
+                <label>Teléfono: <input type="tel" name="telefono" pattern="[0-9]{10}"></label>
+                <label>Dirección: <input type="text" name="direccion"></label>
+            </fieldset>
+
+            <div class="buttons">
+                <input type="reset" value="Restablecer">
+                <input type="submit" value="Registrar">
+            </div>
+        </form>
+    </div>
+<img src="/Imagenes_principal/wazagato.png" alt="">
+</body>
+</html>
